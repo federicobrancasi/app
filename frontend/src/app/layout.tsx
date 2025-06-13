@@ -1,4 +1,5 @@
-import '@/app/globals.css';
+// src/app/layout.tsx
+import './globals.css';
 import MainLayout from '@/components/layout/MainLayout';
 
 export const metadata = {
@@ -6,10 +7,16 @@ export const metadata = {
   description: 'Real-time video monitoring and AI-powered events',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ 
+  children 
+}: { 
+  children: React.ReactNode 
+}) {
   return (
     <html lang="en">
-      <body><MainLayout>{children}</MainLayout></body>
+      <body>
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
   );
 }

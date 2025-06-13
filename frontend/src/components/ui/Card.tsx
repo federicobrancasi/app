@@ -1,11 +1,20 @@
+// src/components/ui/Card.tsx
 import React from 'react';
 
-export const Card: React.FC<{ className?: string }> = ({ children, className = '' }) => {
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div
-      className={`bg-white rounded-2xl shadow-lg p-6 space-y-4 ${className}`}
+      className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-200 ${className}`}
     >
       {children}
     </div>
   );
 };
+
+// Default export for backwards compatibility
+export default Card;
