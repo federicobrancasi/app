@@ -1,0 +1,417 @@
+# ====================
+# ENVIRONMENT & SECRETS
+# ====================
+
+# Environment files
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Configuration files with secrets
+config.ini
+settings.ini
+local_settings.py
+secrets/
+.secrets
+*.pem
+*.key
+*.crt
+*.cert
+credentials.json
+token.json
+jwt_secret.txt
+
+# ====================
+# PYTHON BACKEND
+# ====================
+
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+*.conda
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+test-results/
+
+# Jupyter
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# Other Python tools
+.pyenv
+.python-version
+Pipfile.lock
+poetry.lock
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# ====================
+# NODE.JS FRONTEND
+# ====================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+.nuxt
+.output
+.vitepress/dist
+.temp
+.cache
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Package manager files
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Testing
+coverage/
+.nyc_output
+.jest/
+playwright-report/
+test-results/
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+
+# Linting
+.eslintcache
+.stylelintcache
+
+# Bundler cache
+.parcel-cache/
+.webpack/
+.rollup.cache/
+.swc/
+.turbo/
+
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+.lock-wscript
+
+# ====================
+# DATABASES
+# ====================
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+visionguard.db
+
+# Database dumps & backups
+*.sql
+*.dump
+*.backup
+
+# Redis
+dump.rdb
+appendonly.aof
+
+# ====================
+# DATA & MEDIA FILES
+# ====================
+
+# Application data directories
+data/
+uploads/
+temp/
+cache/
+frames/
+captures/
+thumbnails/
+recordings/
+streams/
+processing/
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+*.wmv
+*.m4v
+
+# Image files (exclude small icons/logos)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.svg
+!public/icons/*.svg
+!src/assets/icons/*.svg
+
+# Audio files
+*.wav
+*.mp3
+*.aac
+*.ogg
+*.m4a
+
+# Large data files
+*.csv
+*.json
+*.xml
+!package.json
+!package-lock.json
+!tsconfig.json
+!next.config.js
+
+# Machine learning models
+models/
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.pb
+*.onnx
+*.tflite
+checkpoints/
+saved_models/
+
+# ====================
+# LOGS & MONITORING
+# ====================
+
+# Log files
+logs/
+*.log
+app.log
+error.log
+access.log
+debug.log
+npm-debug.log*
+yarn-debug.log*
+
+# Process files
+*.pid
+celerybeat-schedule
+celerybeat.pid
+
+# ====================
+# DEVELOPMENT TOOLS
+# ====================
+
+# IDEs & Editors
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.iws
+*.iml
+*.ipr
+*.swp
+*.swo
+*~
+.sublime-workspace
+.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+.directory
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# ====================
+# DOCKER & CONTAINERS
+# ====================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+volumes/
+docker-data/
+
+# ====================
+# DEPLOYMENT & HOSTING
+# ====================
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Firebase
+.firebase/
+
+# AWS
+.aws/
+
+# Serverless
+.serverless/
+
+# ====================
+# BACKUP & TEMPORARY
+# ====================
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+.tmp/
+
+# Archive files
+*.zip
+*.tar.gz
+*.7z
+*.rar
+*.tar
+*.gz
+*.bz2
+
+# Temporary directories
+tmp/
+temp/
+.temp/
+scratch/
+sandbox/
+
+# ====================
+# SPECIFIC TO VISIONGUARD
+# ====================
+
+# Video processing artifacts
+temp_frames/
+analysis_results/
+detection_logs/
+monitoring/
+metrics/
+
+# AI analysis cache
+ai_cache/
+frame_cache/
+
+# Generated API types
+src/types/api-generated.ts
+
+# Development assets
+public/dev-assets/
+public/uploads/
+public/temp/
+
+# Test artifacts
+screenshots/
+test-screenshots/
+
+# Build analysis
+.next/analyze/
+bundle-analyzer-report.html
+
+# Camera-specific data
+camera_configs/
+stream_data/
+
+# System monitoring
+system_logs/
+performance_logs/
+
+# ====================
+# KEEP THESE FILES
+# ====================
+# Files that should NOT be ignored
+!.gitkeep
+!.env.example
+!.env.local.example
+!docker-compose.yml
+!Dockerfile
+!README.md
+!LICENSE
+!package.json
+!package-lock.json
+!yarn.lock
+!requirements.txt
+!environment.yml
+!tsconfig.json
+!next.config.js
+!tailwind.config.js
+!postcss.config.js
