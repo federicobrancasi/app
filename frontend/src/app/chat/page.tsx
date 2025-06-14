@@ -63,11 +63,6 @@ const INITIAL_SUGGESTIONS: Suggestion[] = [
     category: "Event Analysis"
   },
   {
-    text: "Show me what's happening now",
-    icon: <Eye className="w-4 h-4" />,
-    category: "Live Analysis"
-  },
-  {
     text: "Are all my cameras working properly?",
     icon: <Shield className="w-4 h-4" />,
     category: "System Status"
@@ -76,11 +71,6 @@ const INITIAL_SUGGESTIONS: Suggestion[] = [
     text: "Alert me if anyone approaches the back entrance",
     icon: <Bell className="w-4 h-4" />,
     category: "Security Monitoring"
-  },
-  {
-    text: "What security events occurred this week?",
-    icon: <AlertTriangle className="w-4 h-4" />,
-    category: "Weekly Summary"
   }
 ];
 

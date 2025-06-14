@@ -129,8 +129,60 @@ class VideoProcessor:
 
     async def _load_cameras(self):
         defaults = [
-            {"id": "cam1", "name": "Front Entrance", "url": "", "enabled": True},
-            {"id": "cam2", "name": "Parking Lot", "url": "", "enabled": True},
+            {
+                "id": "cam1",
+                "name": "Back Entrance",
+                "location": "Your House",
+                "url": "",
+                "enabled": True,
+                "ai_enabled": True,
+                "motion_detection": True,
+            },
+            {
+                "id": "cam2",
+                "name": "Front Entrance",
+                "location": "Your House",
+                "url": "",
+                "enabled": True,
+                "ai_enabled": True,
+                "motion_detection": True,
+            },
+            {
+                "id": "cam3",
+                "name": "Back Entrance",
+                "location": "Your House",
+                "url": "",
+                "enabled": True,
+                "ai_enabled": True,
+                "motion_detection": True,
+            },
+            {
+                "id": "cam4",
+                "name": "Front Entrance",
+                "location": "Your House",
+                "url": "",
+                "enabled": True,
+                "ai_enabled": True,
+                "motion_detection": True,
+            },
+            {
+                "id": "cam5",
+                "name": "Emergency Exit",
+                "location": "West Wing",
+                "url": "",
+                "enabled": True,
+                "ai_enabled": False,
+                "motion_detection": False,
+            },
+            {
+                "id": "cam6",
+                "name": "Server Room",
+                "location": "IT Department",
+                "url": "",
+                "enabled": True,
+                "ai_enabled": True,
+                "motion_detection": True,
+            },
         ]
         for cfg in defaults:
             if cfg.get("enabled", True):
