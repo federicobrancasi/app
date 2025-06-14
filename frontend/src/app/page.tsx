@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import { 
-  Eye, 
   Camera, 
   Brain, 
   Shield, 
@@ -15,9 +14,10 @@ import {
   ArrowRight,
   Video,
   AlertTriangle,
-  Play,
+  MessageSquare,
   TrendingUp,
-  Globe
+  Globe,
+  Sparkles
 } from 'lucide-react';
 
 interface SystemStats {
@@ -154,10 +154,10 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
-              <Link href="/monitor">
+              <Link href="/chat">
                 <Button size="lg" className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200">
-                  <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                  Start Live Monitoring
+                  <Sparkles className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  Chat with AI Assistant
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -302,24 +302,6 @@ export default function HomePage() {
             </Card>
           </Link>
 
-          <Link href="/monitor" className="group">
-            <Card className="p-8 text-center border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group-hover:scale-105 bg-gradient-to-br from-emerald-50 to-emerald-100">
-              <div className="bg-emerald-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Eye className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
-                Live Monitoring
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                View real-time feeds and monitor all your cameras with advanced AI-powered insights.
-              </p>
-              <div className="flex items-center justify-center text-emerald-600 group-hover:text-emerald-700 font-semibold">
-                <span>Start Monitoring</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-              </div>
-            </Card>
-          </Link>
-
           <Link href="/chat" className="group">
             <Card className="p-8 text-center border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group-hover:scale-105 bg-gradient-to-br from-purple-50 to-purple-100">
               <div className="bg-purple-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -333,6 +315,24 @@ export default function HomePage() {
               </p>
               <div className="flex items-center justify-center text-purple-600 group-hover:text-purple-700 font-semibold">
                 <span>Open Chat</span>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+              </div>
+            </Card>
+          </Link>
+
+          <Link href="/events" className="group">
+            <Card className="p-8 text-center border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 group-hover:scale-105 bg-gradient-to-br from-emerald-50 to-emerald-100">
+              <div className="bg-emerald-500 rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Video className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
+                Security Events
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Review detected events, analyze patterns, and manage alerts from your security system.
+              </p>
+              <div className="flex items-center justify-center text-emerald-600 group-hover:text-emerald-700 font-semibold">
+                <span>View Events</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
               </div>
             </Card>
