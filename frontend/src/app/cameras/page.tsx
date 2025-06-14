@@ -84,7 +84,7 @@ const demoCameras: Camera[] = [
     enabled: true,
     ai_enabled: true,
     motion_detection: true,
-    url: videoSources[2]
+    url: videoSources[1]
   },
   {
     id: 'cam3',
@@ -94,7 +94,7 @@ const demoCameras: Camera[] = [
     enabled: true,
     ai_enabled: true,
     motion_detection: true,
-    url: videoSources[1]
+    url: videoSources[2]
   },
   {
     id: 'cam4',

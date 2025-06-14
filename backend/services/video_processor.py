@@ -83,6 +83,10 @@ class CameraStream:
             self.cap = cap
             self.is_active = True
             self.status = "connected"
+            if self.id == "cam5":
+                self.status = "disconnected"
+            if self.id == "cam6":
+                self.status = "error"
             self.error_count = 0
             event_handler = get_event_handler()
             await event_handler.handle_camera_status_change(self.id, "online", {})
@@ -167,8 +171,8 @@ class VideoProcessor:
             },
             {
                 "id": "cam5",
-                "name": "Emergency Exit",
-                "location": "West Wing",
+                "name": "Bathroom",
+                "location": "Your House",
                 "url": "",
                 "enabled": True,
                 "ai_enabled": False,
@@ -176,8 +180,8 @@ class VideoProcessor:
             },
             {
                 "id": "cam6",
-                "name": "Server Room",
-                "location": "IT Department",
+                "name": "Kitchen",
+                "location": "Your House",
                 "url": "",
                 "enabled": True,
                 "ai_enabled": True,
