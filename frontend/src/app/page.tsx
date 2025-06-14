@@ -16,9 +16,7 @@ import {
   Video,
   AlertTriangle,
   Play,
-  Pause,
   TrendingUp,
-  Clock,
   Globe
 } from 'lucide-react';
 
