@@ -1,6 +1,7 @@
+# backend/main.py
 import logging
 
-from api.routes import cameras
+from api.routes import cameras, chat
 from core.database import create_tables
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
@@ -17,7 +18,6 @@ app = FastAPI(
     redoc_url=None,
 )
 
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -26,17 +26,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-# # CORS
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=settings.ALLOWED_ORIGINS,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
-
-# Routers
+# Include API routers
 app.include_router(cameras.router)
+app.include_router(chat.router)
 
 
 # WebSocket endpoint
@@ -65,4 +57,5 @@ def health():
     return {
         "database": "ok",
         "video_processor": "running" if vp.is_running else "stopped",
+        "ai_service": "available",
     }
